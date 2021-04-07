@@ -1,10 +1,13 @@
+ins :: a -> [a] -> [[a]]
+ins x []     = [[x]]
+ins x (y:ys) = (x:y:ys) : map (y:) (ins x ys)
+
+f :: Int -> [Int]
+f x = [1..x]
+
 permutations :: [a] -> [[a]]
 permutations []     = [[]]
 permutations (x:xs) = permutations xs >>= ins x
-    where
-        ins :: a -> [a] -> [[a]]
-        ins x []     = [[x]]
-        ins x (y:ys) = (x:y:ys) : map (y:) (ins x ys)
 
 isMember :: Eq a => a -> [a] -> Bool
 isMember n [] = False
