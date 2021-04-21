@@ -7,7 +7,7 @@ for line in stdin:
         counter[line] = 1
     else:
         counter[line] += 1
-print(counter)
+print('Result:')
 for line, count in counter.items():
     if count > 2:
         print(line, end='')

@@ -55,6 +55,7 @@ int main() {
         field[i][j] = State::DROPPED;
     }
 
+    std::cout << "Field after dropping ('2' means dropped):\n";
     printField(field);
 
     int parts = 0;
@@ -66,5 +67,5 @@ int main() {
             }
         }
     }
-    std::cout << parts << std::endl;
+    std::cout << "Parts left: " << parts << std::endl;
 }

@@ -22,6 +22,7 @@ def max_nesting(sequence):
             if opening[s] != stack.pop(): return -1
         else:
             return -1
+    if len(stack) != 0: return -1
     return maxNesting
 
 if __name__ == '__main__':
